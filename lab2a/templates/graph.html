@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Included D3 Library and others-->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+<style>
+    h1 {text-align: center;}
+    h2 {text-align: center;}
+    h3 {text-align: center;}
+    
+</style>
+</head>
+
+<body>
+
+<!--Header-->
+<div class="container" style = "box-sizing: border-box;
+width: 100%;
+border: solid #9d1cd9 5px;
+padding: 5px;">
+
+    <h1>Visualization Lab 2</h1>
+    <h2>United States Social/Health Visualizations</h2>
+    <h3>Prateek Sengar (ID: 115231850)</h2> 
+
+<!--Radio Buttons for Selecting Orientation-->
+</div>
+<div class="row" style="margin:20px ;">
+    <div class="col-4">
+        <div class="form-check-inline">
+            <label class="form-check-label" for="radio-btn">
+                <input type="radio" class="form-check-input" id="radio-btn" name="toggle" value="side" checked>Sideways
+            </label>
+            </div>
+            <div class="form-check-inline">
+            <label class="form-check-label" for="radio-btn">
+                <input type="radio" class="form-check-input" id="radio-btn" name="toggle" value="up">Upwards
+            </label>
+            </div>
+    </div>
+    <!--Dropdown for Selecting Attribuites/Variables-->
+    <div class="col-4" id="dropdown">
+            
+            <select id="list" onchange="UpdateGraph()");>
+                <option value="state">State</option>
+                <option value="total_population">Total Population</option>
+                <option value="percent_homeowners">Percent Homeowners</option>
+                <option value="percent_below_poverty">Percent Below Poverty</option>
+                <option value="percent_fair_or_poor_health">Percent Poor Health</option>
+                <option value="percent_frequent_physical_distress">Percent Frequent Physical Distress</option>
+                <option value="percent_adults_with_obesity">Percent Adults With Obesity</option>
+                <option value="percent_minorities">Percent Minorities</option>
+                <option value="per_capita_income">Per Capita Income</option>
+                <option value="percent_below_poverty">Percent Below Poverty Line</option>
+                <option value="percent_unemployed_CDC">Percent Unemployed</option>
+                <option value="percent_excessive_drinking_cat">Excessive Drinking in Adults</option>
+                <option value="population_density_per_sqmi_cat">Population Density</option>
+                <option value="percent_insufficient_sleep">Percent Insufficient Sleep</option>
+                <option value="percent_frequent_physical_distress">Percent Frequent Mental Distress</option>
+                                
+            </select>
+    </div>
+    <!--Link to Scatter Plot-->
+    <div class="col-4" id="">
+        <a href="scatter.html">Go To Scatter Plot</a>
+    </div>
+</div>
+<!--div for plotting graphs-->
+<div id="plot">  
+
+</div>
+    </body>
+  
+    <script src="{{ url_for('static', filename='js/graph.js') }}"></script>
+
+</body>
+</html>

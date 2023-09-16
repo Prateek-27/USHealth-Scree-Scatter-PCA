@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Included D3 Library and others-->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Header-->
+    <div class="container" style="box-sizing: border-box;
+width: 100%;
+border: solid #9d1cd9 5px;
+padding: 5px;">
+
+        <h1>Visualization Lab 2a</h1>
+        <h2>United States Social/Health Visualizations</h2>
+        <h3>Prateek Sengar (ID: 115231850)</h2>
+
+            <div class="row">
+                <div class="col-6" style="text-align: center;" id="">
+                    <a href="plots">Go To Scree Plot</a>
+                </div>
+                <!--Link to Scatter Plot-->
+                <div class="col-6" style="text-align: center;" id="">
+                    <a href="scatter">Go To Scatter Plot</a>
+                </div>
+            </div>
+    </div>
+    <!--div for plotting graphs-->
+    <div id="plot">
+
+    </div>
+</body>
+
+<script src="{{ url_for('static', filename='js/biplot.js') }}"></script>
+
+</body>
+
+</html>
